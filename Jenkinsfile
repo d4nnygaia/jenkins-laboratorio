@@ -9,7 +9,7 @@ pipeline {
     stage('Docker build'){
       steps{
         sh 'docker build -t jenkins-laravel .'
-        sh 'docker run --rm jenkins-laravel'
+        sh 'docker run -d -p8081:80 jenkins-laravel'
       }
     }
   }

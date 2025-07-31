@@ -6,7 +6,11 @@ pipeline {
         sh 'docker info'
       }
     }
-
+    stage('Docker build'){
+      steps{
+        sh 'docker bulid -t jenkins-laravel .'
+      }
+    }
   }
 }
 

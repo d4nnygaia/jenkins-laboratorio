@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Docker build'){
       steps{
-        sh 'docker rmi jenkins-laravel '
+        sh 'docker rmi jenkins-laravel'
         sh 'docker build -t jenkins-laravel .'
         sh 'docker run -d jenkins-laravel'
       }

@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Docker build'){
       steps{
-        sh 'docker bulid -t jenkins-laravel .'
+        sh 'docker build -t jenkins-laravel .'
       }
     }
   }
